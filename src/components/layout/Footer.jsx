@@ -10,7 +10,7 @@ import {
   Link as MuiLink,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
-import BalanceIcon from '@mui/icons-material/Balance';
+
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -51,19 +51,18 @@ const Footer = () => {
           <Grid item xs={12} md={4}>
             <Stack direction="row" alignItems="center" spacing={1.5} mb={2.5}>
               <Box
+                component="img"
+                src="/logo.png"
+                alt="IP Mudra Logo"
                 sx={{
-                  width: 48,
-                  height: 48,
+                  width: 52,
+                  height: 52,
+                  objectFit: 'contain',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #C9A84C, #e0c070)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
                   flexShrink: 0,
+                  filter: 'drop-shadow(0 2px 8px rgba(201,168,76,0.3))',
                 }}
-              >
-                <BalanceIcon sx={{ color: '#0B1F4B', fontSize: 26 }} />
-              </Box>
+              />
               <Box>
                 <Typography
                   sx={{

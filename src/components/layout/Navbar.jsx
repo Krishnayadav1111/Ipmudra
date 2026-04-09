@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -14,59 +14,81 @@ import {
   useTheme,
   useMediaQuery,
   Stack,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import BalanceIcon from '@mui/icons-material/Balance';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import useNavbarScroll from '../../hooks/useNavbarScroll';
-import { NAV_LINKS } from '../../utils/constants';
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import useNavbarScroll from "../../hooks/useNavbarScroll";
+import { NAV_LINKS } from "../../utils/constants";
 
 const Navbar = () => {
   const scrolled = useNavbarScroll(80);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleDrawerToggle = () => setDrawerOpen((prev) => !prev);
 
-  const navbarBg = scrolled
-    ? 'rgba(11, 31, 75, 0.98)'
-    : 'transparent';
+  const navbarBg = scrolled ? "rgba(11, 31, 75, 0.98)" : "transparent";
 
   const drawer = (
     <Box
       sx={{
         width: 300,
-        height: '100%',
-        background: 'linear-gradient(160deg, #060f26 0%, #0B1F4B 100%)',
-        color: 'white',
-        display: 'flex',
-        flexDirection: 'column',
+        height: "100%",
+        background: "linear-gradient(160deg, #060f26 0%, #0B1F4B 100%)",
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <Box
         sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
           p: 2.5,
-          borderBottom: '1px solid rgba(201,168,76,0.3)',
+          borderBottom: "1px solid rgba(201,168,76,0.3)",
         }}
       >
         <Stack direction="row" alignItems="center" spacing={1}>
-          <BalanceIcon sx={{ color: '#C9A84C', fontSize: 28 }} />
+          <Box
+            component="img"
+            src="/src/assets/ipmudra.png"
+            alt="IP Mudra Logo"
+            sx={{
+              width: 36,
+              height: 36,
+              objectFit: "contain",
+              borderRadius: "50%",
+            }}
+          />
           <Box>
-            <Box sx={{ fontFamily: '"Playfair Display", serif', fontWeight: 700, fontSize: '1.1rem', lineHeight: 1.1 }}>
+            <Box
+              sx={{
+                fontFamily: '"Playfair Display", serif',
+                fontWeight: 700,
+                fontSize: "1.1rem",
+                lineHeight: 1.1,
+              }}
+            >
               IP Mudra
             </Box>
-            <Box sx={{ fontSize: '0.6rem', color: '#C9A84C', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+            <Box
+              sx={{
+                fontSize: "0.6rem",
+                color: "#C9A84C",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+              }}
+            >
               Intellectual Property Services
             </Box>
           </Box>
         </Stack>
-        <IconButton onClick={handleDrawerToggle} sx={{ color: 'white' }}>
+        <IconButton onClick={handleDrawerToggle} sx={{ color: "white" }}>
           <CloseIcon />
         </IconButton>
       </Box>
@@ -77,21 +99,21 @@ const Navbar = () => {
             <ListItemButton
               component={NavLink}
               to={link.path}
-              end={link.path === '/'}
+              end={link.path === "/"}
               onClick={handleDrawerToggle}
               sx={{
                 px: 3,
                 py: 1.5,
-                color: 'rgba(255,255,255,0.85)',
-                transition: 'all 0.2s',
-                '&.active': {
-                  color: '#C9A84C',
-                  background: 'rgba(201,168,76,0.1)',
-                  borderRight: '3px solid #C9A84C',
+                color: "rgba(255,255,255,0.85)",
+                transition: "all 0.2s",
+                "&.active": {
+                  color: "#C9A84C",
+                  background: "rgba(201,168,76,0.1)",
+                  borderRight: "3px solid #C9A84C",
                 },
-                '&:hover': {
-                  color: '#C9A84C',
-                  background: 'rgba(201,168,76,0.07)',
+                "&:hover": {
+                  color: "#C9A84C",
+                  background: "rgba(201,168,76,0.07)",
                 },
               }}
             >
@@ -100,7 +122,7 @@ const Navbar = () => {
                 primaryTypographyProps={{
                   fontFamily: '"Inter", sans-serif',
                   fontWeight: 500,
-                  fontSize: '0.95rem',
+                  fontSize: "0.95rem",
                 }}
               />
             </ListItemButton>
@@ -108,13 +130,16 @@ const Navbar = () => {
         ))}
       </List>
 
-      <Divider sx={{ borderColor: 'rgba(201,168,76,0.2)', mx: 3 }} />
+      <Divider sx={{ borderColor: "rgba(201,168,76,0.2)", mx: 3 }} />
       <Box sx={{ p: 3 }}>
         <Button
           variant="contained"
           color="secondary"
           fullWidth
-          onClick={() => { navigate('/contact'); handleDrawerToggle(); }}
+          onClick={() => {
+            navigate("/contact");
+            handleDrawerToggle();
+          }}
           sx={{ py: 1.5, fontWeight: 700 }}
         >
           Get Consultation
@@ -130,20 +155,20 @@ const Navbar = () => {
         elevation={scrolled ? 4 : 0}
         sx={{
           background: navbarBg,
-          backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(201,168,76,0.2)' : 'none',
-          transition: 'all 0.4s cubic-bezier(0.4,0,0.2,1)',
+          backdropFilter: scrolled ? "blur(20px)" : "none",
+          borderBottom: scrolled ? "1px solid rgba(201,168,76,0.2)" : "none",
+          transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
           zIndex: theme.zIndex.appBar,
         }}
       >
         <Toolbar
           sx={{
             maxWidth: 1400,
-            width: '100%',
-            mx: 'auto',
+            width: "100%",
+            mx: "auto",
             px: { xs: 2, md: 4 },
             py: scrolled ? 0.5 : 1,
-            transition: 'padding 0.3s ease',
+            transition: "padding 0.3s ease",
           }}
         >
           {/* Logo */}
@@ -151,50 +176,48 @@ const Navbar = () => {
             component={Link}
             to="/"
             sx={{
-              display: 'flex',
-              alignItems: 'center',
+              display: "flex",
+              alignItems: "center",
               gap: 1.5,
-              textDecoration: 'none',
+              textDecoration: "none",
               flexGrow: 1,
             }}
           >
             <Box
+              component="img"
+              src="/logo.png"
+              alt="IP Mudra Logo"
               sx={{
-                width: 42,
-                height: 42,
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #C9A84C, #e0c070)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 2px 12px rgba(201,168,76,0.4)',
+                width: 46,
+                height: 46,
+                objectFit: "contain",
+                borderRadius: "50%",
                 flexShrink: 0,
+                filter: "drop-shadow(0 2px 8px rgba(201,168,76,0.4))",
               }}
-            >
-              <BalanceIcon sx={{ color: '#0B1F4B', fontSize: 24 }} />
-            </Box>
+            />
             <Box>
               <Box
                 sx={{
                   fontFamily: '"Playfair Display", serif',
                   fontWeight: 800,
-                  fontSize: { xs: '1.15rem', md: '1.35rem' },
-                  color: 'white',
+                  fontSize: { xs: "1.15rem", md: "1.35rem" },
+                  color: "white",
                   lineHeight: 1.1,
-                  letterSpacing: '0.01em',
+                  letterSpacing: "0.01em",
                 }}
               >
                 IP Mudra
               </Box>
               <Box
                 sx={{
-                  fontSize: { xs: '0.5rem', md: '0.55rem' },
-                  color: '#C9A84C',
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
+                  fontSize: { xs: "0.5rem", md: "0.55rem" },
+                  color: "#C9A84C",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
                   fontFamily: '"Inter", sans-serif',
                   fontWeight: 600,
-                  display: { xs: 'none', sm: 'block' },
+                  display: { xs: "none", sm: "block" },
                 }}
               >
                 Intellectual Property Services
@@ -210,25 +233,25 @@ const Navbar = () => {
                   key={link.path}
                   component={NavLink}
                   to={link.path}
-                  end={link.path === '/'}
+                  end={link.path === "/"}
                   sx={{
-                    color: 'rgba(255,255,255,0.85)',
-                    fontSize: '0.8rem',
+                    color: "rgba(255,255,255,0.85)",
+                    fontSize: "0.8rem",
                     fontWeight: 500,
                     px: 1.5,
                     py: 1,
-                    minWidth: 'auto',
-                    textTransform: 'none',
-                    letterSpacing: '0.02em',
+                    minWidth: "auto",
+                    textTransform: "none",
+                    letterSpacing: "0.02em",
                     borderRadius: 1,
-                    transition: 'all 0.2s',
-                    '&.active': {
-                      color: '#C9A84C',
-                      background: 'rgba(201,168,76,0.1)',
+                    transition: "all 0.2s",
+                    "&.active": {
+                      color: "#C9A84C",
+                      background: "rgba(201,168,76,0.1)",
                     },
-                    '&:hover': {
-                      color: '#C9A84C',
-                      background: 'rgba(201,168,76,0.07)',
+                    "&:hover": {
+                      color: "#C9A84C",
+                      background: "rgba(201,168,76,0.07)",
                     },
                   }}
                 >
@@ -242,11 +265,11 @@ const Navbar = () => {
                 to="/contact"
                 sx={{
                   ml: 1.5,
-                  fontSize: '0.78rem',
+                  fontSize: "0.78rem",
                   fontWeight: 700,
                   px: 2.5,
                   py: 1,
-                  whiteSpace: 'nowrap',
+                  whiteSpace: "nowrap",
                 }}
               >
                 Get Consultation
@@ -260,9 +283,9 @@ const Navbar = () => {
               edge="start"
               onClick={handleDrawerToggle}
               sx={{
-                color: 'white',
+                color: "white",
                 ml: 1,
-                border: '1px solid rgba(201,168,76,0.3)',
+                border: "1px solid rgba(201,168,76,0.3)",
                 borderRadius: 1,
                 p: 0.8,
               }}
@@ -277,7 +300,7 @@ const Navbar = () => {
         anchor="right"
         open={drawerOpen}
         onClose={handleDrawerToggle}
-        PaperProps={{ sx: { background: 'transparent' } }}
+        PaperProps={{ sx: { background: "transparent" } }}
       >
         {drawer}
       </Drawer>
