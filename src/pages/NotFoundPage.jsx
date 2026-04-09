@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import BalanceIcon from '@mui/icons-material/Balance';
+
 
 const NotFoundPage = () => {
   return (
@@ -18,7 +18,12 @@ const NotFoundPage = () => {
       }}
     >
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-        <BalanceIcon sx={{ fontSize: 80, color: '#C9A84C', mb: 3 }} />
+        <Box
+          component="img"
+          src="/logo.png"
+          alt="IP Mudra Logo"
+          sx={{ width: 120, height: 120, objectFit: 'contain', mb: 3 }}
+        />
         <Typography
           sx={{
             fontFamily: '"Playfair Display", serif',

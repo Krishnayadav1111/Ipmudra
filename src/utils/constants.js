@@ -270,7 +270,7 @@ export const FIRM_STATS = [
 
 export const CONTACT_INFO = {
   address: '4th Floor, IP Tower, Connaught Place, New Delhi – 110001, India',
-  email: 'info@ipmudra.in',
+  email: 'info@ipmudra.com',
   phone: '+91-11-4567-8900',
   mobile: '+91-98765-43210',
   hours: 'Mon – Sat: 9:00 AM – 6:30 PM',
