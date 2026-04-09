@@ -16,6 +16,7 @@ import {
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import CloseIcon from '@mui/icons-material/Close';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
 
 const FloatingEnquireButton = () => {
   const [open, setOpen] = useState(false);
@@ -29,10 +30,30 @@ const FloatingEnquireButton = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitted(true);
-    reset();
-    setTimeout(() => { setSubmitted(false); setOpen(false); }, 2500);
+    try {
+      const templateParams = {
+        from_name:  data.name,
+        from_email: data.email,
+        phone:      data.phone || 'Not provided',
+        service:    'Quick Enquiry',
+        message:    data.query,
+        to_email:   'info@ipmudra.com',
+      };
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setSubmitted(true);
+      reset();
+      setTimeout(() => { setSubmitted(false); setOpen(false); }, 2500);
+    } catch (err) {
+      console.error('Failed to send enquiry:', err);
+      alert('Failed to send enquiry. Please try again later.');
+    }
   };
 
   return (
@@ -153,6 +174,17 @@ const FloatingEnquireButton = () => {
                   {...register('email', {
                     required: 'Email is required',
                     pattern: { value: /^\S+@\S+\.\S+$/, message: 'Enter a valid email' },
+                  })}
+                />
+                <TextField
+                  label="Phone Number"
+                  fullWidth
+                  size="small"
+                  error={!!errors.phone}
+                  helperText={errors.phone?.message}
+                  {...register('phone', {
+                    required: 'Phone number is required',
+                    pattern: { value: /^[0-9+\-\s()]{7,15}$/, message: 'Enter a valid phone number' },
                   })}
                 />
                 <TextField

@@ -2,16 +2,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import emailjs from '@emailjs/browser';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// EmailJS configuration
-// 1. Go to https://www.emailjs.com/ and sign up for a free account.
-// 2. Create an Email Service connected to info@ipmudra.com (Hostinger SMTP).
-// 3. Create an Email Template and note its Template ID.
-// 4. Copy your Public Key from Account → API Keys.
-// 5. Replace the three placeholder values below.
-// ─────────────────────────────────────────────────────────────────────────────
-const EMAILJS_SERVICE_ID  = 'service_9l6knyf';   // e.g. 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'template_fayl6uc';  // e.g. 'template_xyz456'
-const EMAILJS_PUBLIC_KEY  = 'HDBRU9joBSlUf4Hoj';   // e.g. 'abcDEFghiJKL'
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const submitContact = createAsyncThunk(
   'contact/submit',
