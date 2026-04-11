@@ -307,7 +307,7 @@ export const CLIENTS = [
   },
   {
     id: 7,
-    name: "Sunny Leone",
+    name: "Potions by Sunny Leone",
     industry: "Restaurant and bar",
     initials: "SL",
     logo: SunnyLeoneImg,
@@ -388,7 +388,7 @@ export const NEWS_ITEMS = [
 ];
 
 export const FIRM_STATS = [
-  { value: "1500+", label: "Cases Handled" },
+  { value: "850+", label: "Cases Handled" },
   { value: "15+", label: "Years Experience" },
   { value: "98%", label: "Success Rate" },
   { value: "200+", label: "Happy Clients" },

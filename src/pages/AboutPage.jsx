@@ -120,7 +120,7 @@ const AboutPage = () => {
           >
             {[
               { value: '15+', label: 'Years of Experience' },
-              { value: '1500+', label: 'Cases Handled' },
+              { value: '850+', label: 'Cases Handled' },
               { value: '98%', label: 'Success Rate' },
               { value: '200+', label: 'Satisfied Clients' },
               { value: '50+', label: 'Expert Attorneys' },
