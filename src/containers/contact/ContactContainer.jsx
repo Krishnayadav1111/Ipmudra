@@ -46,7 +46,7 @@ const ContactContainer = () => {
   const contactDetails = [
     { icon: LocationOnIcon, label: 'Office Address', value: CONTACT_INFO.address },
     { icon: EmailIcon, label: 'Email Us', value: CONTACT_INFO.email },
-    { icon: PhoneIcon, label: 'Call Us', value: `${CONTACT_INFO.phone} | ${CONTACT_INFO.mobile}` },
+    { icon: PhoneIcon, label: 'Call Us', value: CONTACT_INFO.phone },
     { icon: AccessTimeIcon, label: 'Business Hours', value: CONTACT_INFO.hours },
   ];
 
@@ -130,7 +130,7 @@ const ContactContainer = () => {
                         <Typography sx={{ color: '#C9A84C', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', mb: 0.3 }}>
                           {item.label}
                         </Typography>
-                        <Typography sx={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', lineHeight: 1.6 }}>
+                        <Typography sx={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', lineHeight: 1.6, whiteSpace: 'pre-line' }}>
                           {item.value}
                         </Typography>
                       </Box>

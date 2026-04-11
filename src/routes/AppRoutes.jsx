@@ -11,7 +11,12 @@ const TrademarkPage = lazy(() => import('../pages/TrademarkPage'));
 const CopyrightPage = lazy(() => import('../pages/CopyrightPage'));
 const PatentPage = lazy(() => import('../pages/PatentPage'));
 const DesignPage = lazy(() => import('../pages/DesignPage'));
+const TeamPage = lazy(() => import('../pages/TeamPage'));
 const ContactPage = lazy(() => import('../pages/ContactPage'));
+const IPLitigationPage = lazy(() => import('../pages/IPLitigationPage'));
+const CorporateLawPage = lazy(() => import('../pages/CorporateLawPage'));
+const GeographicalIndicationPage = lazy(() => import('../pages/GeographicalIndicationPage'));
+const TMTPage = lazy(() => import('../pages/TMTPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
 const PageLoader = () => (
@@ -94,6 +99,46 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageLoader />}>
             <ContactPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/team',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <TeamPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/ip-litigation',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <IPLitigationPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/corporate-law',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <CorporateLawPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/geographical-indication',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <GeographicalIndicationPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/tmt',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <TMTPage />
           </Suspense>
         ),
       },

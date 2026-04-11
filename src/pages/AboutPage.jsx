@@ -15,6 +15,7 @@ import PageBanner from '../components/common/PageBanner';
 import SectionTitle from '../components/common/SectionTitle';
 import TeamSection from '../components/ui/TeamSection';
 import ContactCTABanner from '../components/ui/ContactCTABanner';
+import { TEAM_MEMBERS } from '../utils/constants';
 
 const values = [
   { title: 'Excellence', desc: 'We pursue the highest standards in every legal engagement, never settling for mediocrity.' },
@@ -23,14 +24,6 @@ const values = [
   { title: 'Innovation', desc: 'Forward-thinking legal strategies that adapt to the evolving IP landscape.' },
 ];
 
-const team = [
-  { id: 1, name: 'Adv. Priya Sharma', role: 'Senior Partner', specialization: 'Trademark & IP Litigation', experience: '18 years', initials: 'PS' },
-  { id: 2, name: 'Adv. Rajesh Mehta', role: 'Managing Partner', specialization: 'Patent & Corporate Law', experience: '22 years', initials: 'RM' },
-  { id: 3, name: 'Adv. Ananya Krishnan', role: 'Associate Partner', specialization: 'Copyright & Design IP', experience: '12 years', initials: 'AK' },
-  { id: 4, name: 'Adv. Vikram Patel', role: 'Senior Associate', specialization: 'IP Litigation & GI', experience: '9 years', initials: 'VP' },
-  { id: 5, name: 'Adv. Meera Iyer', role: 'Associate', specialization: 'TMT & Corporate Law', experience: '6 years', initials: 'MI' },
-  { id: 6, name: 'Adv. Arjun Nair', role: 'Associate', specialization: 'Trademark Prosecution', experience: '5 years', initials: 'AN' },
-];
 
 const AboutPage = () => {
   return (
@@ -127,7 +120,7 @@ const AboutPage = () => {
           >
             {[
               { value: '15+', label: 'Years of Experience' },
-              { value: '500+', label: 'Cases Handled' },
+              { value: '1500+', label: 'Cases Handled' },
               { value: '98%', label: 'Success Rate' },
               { value: '200+', label: 'Satisfied Clients' },
               { value: '50+', label: 'Expert Attorneys' },
@@ -144,7 +137,7 @@ const AboutPage = () => {
         </Container>
       </Box>
 
-      <TeamSection members={team} />
+      <TeamSection members={TEAM_MEMBERS} />
       <ContactCTABanner />
     </>
   );
