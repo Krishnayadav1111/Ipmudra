@@ -49,43 +49,40 @@ const Footer = () => {
         <Grid container spacing={{ xs: 4, md: 6 }}>
           {/* Brand Column */}
           <Grid item xs={12} md={4}>
-            <Stack direction="row" alignItems="center" spacing={1.5} mb={2.5}>
+            <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2.5 }}>
               <Box
                 component="img"
-                src="/logo.png"
+                src="/src/assets/ipmudra.png"
                 alt="IP Mudra Logo"
                 sx={{
-                  width: 52,
-                  height: 52,
+                  height: { xs: 55, md: 70 },
                   objectFit: 'contain',
-                  borderRadius: '50%',
-                  flexShrink: 0,
-                  filter: 'drop-shadow(0 2px 8px rgba(201,168,76,0.3))',
+                  mixBlendMode: 'screen',
                 }}
               />
               <Box>
-                <Typography
+                <Box
                   sx={{
                     fontFamily: '"Playfair Display", serif',
                     fontWeight: 800,
-                    fontSize: '1.4rem',
-                    color: 'white',
-                    lineHeight: 1.1,
+                    fontSize: { xs: '1.4rem', md: '1.8rem' },
+                    color: '#C9A84C',
+                    lineHeight: 1,
+                    letterSpacing: '0.02em',
                   }}
                 >
-                  IP Mudra
-                </Typography>
-                <Typography
+                  IP MUDRA
+                </Box>
+                <Box
                   sx={{
-                    fontSize: '0.55rem',
+                    fontSize: { xs: '0.7rem', md: '1rem' },
                     color: '#C9A84C',
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
+                    mt: 0.5,
                     fontWeight: 600,
                   }}
                 >
-                  Intellectual Property Services
-                </Typography>
+                  विचारो का अधिकार
+                </Box>
               </Box>
             </Stack>
             <Typography
