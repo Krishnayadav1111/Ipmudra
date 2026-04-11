@@ -15,7 +15,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { NAV_LINKS, CONTACT_INFO } from '../../utils/constants';
 
@@ -95,7 +95,7 @@ const Footer = () => {
             <Stack direction="row" spacing={1}>
               {[
                 { Icon: LinkedInIcon, url: '#' },
-                { Icon: TwitterIcon, url: '#' },
+                { Icon: XIcon, url: '#' },
                 { Icon: InstagramIcon, url: 'https://www.instagram.com/ipmudra/' }
               ].map(({ Icon, url }, i) => (
                 <IconButton
