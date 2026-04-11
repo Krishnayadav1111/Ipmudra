@@ -56,7 +56,7 @@ const Navbar = () => {
         <Stack direction="row" alignItems="center" spacing={1.5}>
           <Box
             component="img"
-            src="/src/assets/ipmudra.png"
+            src="/ipmudra.png"
             alt="IP Mudra Logo"
             sx={{
               height: 46,
@@ -184,7 +184,7 @@ const Navbar = () => {
           >
             <Box
               component="img"
-              src="/src/assets/ipmudra.png"
+              src="/ipmudra.png"
               alt="IP Mudra Logo"
               sx={{
                 height: { xs: 50, md: 68 },

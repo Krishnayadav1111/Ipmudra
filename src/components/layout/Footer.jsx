@@ -52,7 +52,7 @@ const Footer = () => {
             <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2.5 }}>
               <Box
                 component="img"
-                src="/src/assets/ipmudra.png"
+                src="/ipmudra.png"
                 alt="IP Mudra Logo"
                 sx={{
                   height: { xs: 55, md: 70 },
