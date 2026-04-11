@@ -53,16 +53,15 @@ const Navbar = () => {
           borderBottom: "1px solid rgba(201,168,76,0.3)",
         }}
       >
-        <Stack direction="row" alignItems="center" spacing={1}>
+        <Stack direction="row" alignItems="center" spacing={1.5}>
           <Box
             component="img"
             src="/src/assets/ipmudra.png"
             alt="IP Mudra Logo"
             sx={{
-              width: 36,
-              height: 36,
+              height: 46,
               objectFit: "contain",
-              borderRadius: "50%",
+              mixBlendMode: "screen",
             }}
           />
           <Box>
@@ -70,21 +69,22 @@ const Navbar = () => {
               sx={{
                 fontFamily: '"Playfair Display", serif',
                 fontWeight: 700,
-                fontSize: "1.1rem",
+                fontSize: "1.2rem",
+                color: "#C9A84C",
                 lineHeight: 1.1,
               }}
             >
-              IP Mudra
+              IP MUDRA
             </Box>
             <Box
               sx={{
-                fontSize: "0.6rem",
+                fontSize: "0.7rem",
                 color: "#C9A84C",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
+                mt: 0.3,
+                fontWeight: 600,
               }}
             >
-              Intellectual Property Services
+              विचारो का अधिकार
             </Box>
           </Box>
         </Stack>
@@ -171,7 +171,6 @@ const Navbar = () => {
             transition: "padding 0.3s ease",
           }}
         >
-          {/* Logo */}
           <Box
             component={Link}
             to="/"
@@ -185,15 +184,13 @@ const Navbar = () => {
           >
             <Box
               component="img"
-              src="/logo.png"
+              src="/src/assets/ipmudra.png"
               alt="IP Mudra Logo"
               sx={{
-                width: 46,
-                height: 46,
+                height: { xs: 50, md: 68 },
                 objectFit: "contain",
-                borderRadius: "50%",
                 flexShrink: 0,
-                filter: "drop-shadow(0 2px 8px rgba(201,168,76,0.4))",
+                mixBlendMode: "screen",
               }}
             />
             <Box>
@@ -201,26 +198,24 @@ const Navbar = () => {
                 sx={{
                   fontFamily: '"Playfair Display", serif',
                   fontWeight: 800,
-                  fontSize: { xs: "1.15rem", md: "1.35rem" },
-                  color: "white",
-                  lineHeight: 1.1,
-                  letterSpacing: "0.01em",
+                  fontSize: { xs: "1.4rem", md: "1.8rem" },
+                  color: "#C9A84C",
+                  lineHeight: 1,
+                  letterSpacing: "0.02em",
                 }}
               >
-                IP Mudra
+                IP MUDRA
               </Box>
               <Box
                 sx={{
-                  fontSize: { xs: "0.5rem", md: "0.55rem" },
+                  fontSize: { xs: "0.7rem", md: "1rem" },
                   color: "#C9A84C",
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  fontFamily: '"Inter", sans-serif',
+                  mt: 0.5,
                   fontWeight: 600,
                   display: { xs: "none", sm: "block" },
                 }}
               >
-                Intellectual Property Services
+                विचारो का अधिकार
               </Box>
             </Box>
           </Box>
