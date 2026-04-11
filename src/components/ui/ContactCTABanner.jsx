@@ -66,7 +66,7 @@ const ContactCTABanner = () => {
               lineHeight: 1.25,
             }}
           >
-            Need Intellectual Property Assistance?
+            Turn Ideas into Protected Assets
           </Typography>
           <Typography
             variant="body1"

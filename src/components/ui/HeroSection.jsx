@@ -220,7 +220,7 @@ const HeroSection = () => {
               }}
             >
               {[
-                { value: '500+', label: 'Cases Handled' },
+                { value: '1500+', label: 'Cases Handled' },
                 { value: '15+', label: 'Years Experience' },
                 { value: '98%', label: 'Success Rate' },
                 { value: '200+', label: 'Clients' },

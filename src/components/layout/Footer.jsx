@@ -16,7 +16,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { NAV_LINKS, CONTACT_INFO } from '../../utils/constants';
 
 const Footer = () => {
@@ -46,7 +46,7 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="xl" sx={{ px: { xs: 2, md: 4 } }}>
-        <Grid container spacing={{ xs: 4, md: 6 }}>
+        <Grid container spacing={{ xs: 5, md: 8, lg: 10 }}>
           {/* Brand Column */}
           <Grid item xs={12} md={4}>
             <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2.5 }}>
@@ -93,9 +93,17 @@ const Footer = () => {
               We combine years of legal experience to give your innovations the protection they deserve.
             </Typography>
             <Stack direction="row" spacing={1}>
-              {[LinkedInIcon, TwitterIcon, FacebookIcon].map((Icon, i) => (
+              {[
+                { Icon: LinkedInIcon, url: '#' },
+                { Icon: TwitterIcon, url: '#' },
+                { Icon: InstagramIcon, url: 'https://www.instagram.com/ipmudra/' }
+              ].map(({ Icon, url }, i) => (
                 <IconButton
                   key={i}
+                  component="a"
+                  href={url}
+                  target={url !== '#' ? "_blank" : undefined}
+                  rel={url !== '#' ? "noopener noreferrer" : undefined}
                   size="small"
                   sx={{
                     color: 'rgba(255,255,255,0.6)',
@@ -125,7 +133,7 @@ const Footer = () => {
               Quick Links
             </Typography>
             <Stack spacing={1}>
-              {NAV_LINKS.map((link) => (
+              {NAV_LINKS.filter(l => !['Trademark', 'Copyright', 'Design', 'Patent'].includes(l.label)).map((link) => (
                 <MuiLink
                   key={link.path}
                   component={Link}
@@ -183,7 +191,7 @@ const Footer = () => {
             <Stack spacing={2}>
               <Stack direction="row" spacing={1.5} alignItems="flex-start">
                 <LocationOnIcon sx={{ color: '#C9A84C', fontSize: 18, mt: 0.3, flexShrink: 0 }} />
-                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>
+                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, whiteSpace: 'pre-line' }}>
                   {CONTACT_INFO.address}
                 </Typography>
               </Stack>
@@ -200,7 +208,7 @@ const Footer = () => {
                 <PhoneIcon sx={{ color: '#C9A84C', fontSize: 18, flexShrink: 0 }} />
                 <MuiLink
                   href={`tel:${CONTACT_INFO.phone}`}
-                  sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.875rem', textDecoration: 'none', '&:hover': { color: '#C9A84C' } }}
+                  sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.875rem', textDecoration: 'none', whiteSpace: 'pre-line', '&:hover': { color: '#C9A84C' } }}
                 >
                   {CONTACT_INFO.phone}
                 </MuiLink>
