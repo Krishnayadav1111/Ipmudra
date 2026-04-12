@@ -27,6 +27,15 @@ import BayssilImg from "../assets/bayassil-beauty-cosmetics.jpeg";
 import SunnyLeoneImg from "../assets/sunny-leon-postion.jpeg";
 import GolfIslandImg from "../assets/Golf-island.jpeg";
 import BrewlabsImg from "../assets/Brewlab-food.jpeg";
+import StylefordImg from "../assets/Styleford-Clothing.jpeg";
+import BlackWaveImg from "../assets/Blackwave-Electronics.jpeg";
+import DhawalImg from "../assets/Dhawal-Laundry detergent.jpeg";
+import AbhyasCareerImg from "../assets/AbhayCareer-Edutech.jpeg";
+import AnuttaraYogaImg from "../assets/Anutara-yoga.jpeg";
+import FSHCIImg from "../assets/FSHCI-foodandsaftey.jpeg";
+import KidieLandImg from "../assets/KidileLand-kidsapparel.jpeg";
+import CyberCopsImg from "../assets/Cyber-cops-publicSaftey.jpeg";
+import UnifyImg from "../assets/Unify-Healthcare.jpeg";
 
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
@@ -332,6 +341,69 @@ export const CLIENTS = [
     industry: "Food and Beverages",
     initials: "BL",
     logo: BrewlabsImg,
+  },
+  {
+    id: 11,
+    name: "Styleford",
+    industry: "Clothing",
+    initials: "SF",
+    logo: StylefordImg,
+  },
+  {
+    id: 12,
+    name: "Black Wave",
+    industry: "Electronics",
+    initials: "BW",
+    logo: BlackWaveImg,
+  },
+  {
+    id: 13,
+    name: "Dhawal",
+    industry: "Laundry Detergent",
+    initials: "DW",
+    logo: DhawalImg,
+  },
+  {
+    id: 14,
+    name: "Abhyas Career Institute",
+    industry: "Edutech",
+    initials: "AC",
+    logo: AbhyasCareerImg,
+  },
+  {
+    id: 15,
+    name: "Anuttara Yoga Shala",
+    industry: "Yoga and Wellness",
+    initials: "AY",
+    logo: AnuttaraYogaImg,
+  },
+  {
+    id: 16,
+    name: "FSHCI",
+    industry: "Food and Safety",
+    initials: "FS",
+    logo: FSHCIImg,
+  },
+  {
+    id: 17,
+    name: "KidieLand",
+    industry: "Kids Apparel",
+    initials: "KL",
+    logo: KidieLandImg,
+  },
+  {
+    id: 18,
+    name: "Cyber Cops",
+    industry: "Public Safety",
+    initials: "CC",
+    logo: CyberCopsImg,
+  },
+  {
+    id: 19,
+    name: "Unify",
+    industry: "Healthcare",
+    initials: "UF",
+    logo: UnifyImg,
   },
 ];
 
