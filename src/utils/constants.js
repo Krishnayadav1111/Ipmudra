@@ -18,7 +18,7 @@ import VarunImg from "../assets/varun.jpeg";
 import SachinImg from "../assets/Sachin.jpeg";
 import MokshaImg from "../assets/moksha.jpeg";
 import RaviImg from "../assets/Raviyadav.jpeg";
-import ManojImg from "../assets/Manojsharma.jpeg";
+import ManojImg from "../assets/manojsharma.jpeg";
 
 import TridentImg from "../assets/Trident-textile.jpeg";
 import BoldfitImg from "../assets/bold-health-and-wellness.jpeg";
