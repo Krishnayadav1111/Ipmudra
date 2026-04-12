@@ -316,7 +316,7 @@ export const CLIENTS = [
   },
   {
     id: 7,
-    name: "Sunny Leone",
+    name: "Potions by Sunny Leone",
     industry: "Restaurant and bar",
     initials: "SL",
     logo: SunnyLeoneImg,
