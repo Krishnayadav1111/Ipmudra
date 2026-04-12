@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Box, CircularProgress } from '@mui/material';
 import Layout from '../components/layout/Layout';
+import GlobalErrorFallback from '../components/common/GlobalErrorFallback';
 
 // Lazy-loaded pages for optimal performance
 const HomePage = lazy(() => import('../pages/HomePage'));
@@ -37,6 +38,7 @@ const PageLoader = () => (
 const router = createBrowserRouter([
   {
     element: <Layout />,
+    errorElement: <GlobalErrorFallback />,
     children: [
       {
         path: '/',

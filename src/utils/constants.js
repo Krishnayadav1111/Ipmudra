@@ -17,6 +17,8 @@ import SandhayaImg from "../assets/Sandhaya.jpeg";
 import VarunImg from "../assets/varun.jpeg";
 import SachinImg from "../assets/Sachin.jpeg";
 import MokshaImg from "../assets/moksha.jpeg";
+import RaviImg from "../assets/Raviyadav.jpeg";
+import ManojImg from "../assets/manojsharma.jpeg";
 
 import TridentImg from "../assets/Trident-textile.jpeg";
 import BoldfitImg from "../assets/bold-health-and-wellness.jpeg";
@@ -268,6 +270,24 @@ export const TEAM_MEMBERS = [
     experience: "3 years",
     avatar: MokshaImg,
     initials: "MI",
+  },
+  {
+    id: 9,
+    name: "Ravi Yadav",
+    role: "Principal Associate",
+    specialization: "Intellectual Property",
+    experience: "11 years",
+    avatar: RaviImg,
+    initials: "RY",
+  },
+  {
+    id: 10,
+    name: "Manoj Sharma",
+    role: "Junior Associate",
+    specialization: "Intellectual Property",
+    experience: "1 years",
+    avatar: ManojImg,
+    initials: "MS",
   },
 ];
 
