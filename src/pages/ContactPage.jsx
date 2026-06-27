@@ -1,17 +1,16 @@
 import React from 'react';
-import PageBanner from '../components/common/PageBanner';
+import TrademarkPricingBanner from '../components/ui/trademark-registration/TrademarkPricingBanner';
+import TrademarkRegistrationContent from '../components/ui/trademark-registration/TrademarkRegistrationContent';
 import ContactContainer from '../containers/contact/ContactContainer';
-import ContactCTABanner from '../components/ui/ContactCTABanner';
+import WhatsAppFloat from '../components/ui/trademark-registration/WhatsAppFloat';
 
 const ContactPage = () => {
   return (
     <>
-      <PageBanner
-        title="Contact Us"
-        subtitle="Get in touch with our team of IP experts. We respond to all inquiries within 24 business hours."
-        breadcrumbs={[{ label: 'Contact Us', path: '/trademark-registration-india' }]}
-      />
+      <TrademarkPricingBanner />
+      <TrademarkRegistrationContent />
       <ContactContainer />
+      <WhatsAppFloat />
     </>
   );
 };

@@ -494,6 +494,9 @@ export const CONTACT_INFO = {
   hours: "Mon – Sat: 9:00 AM – 6:30 PM",
 };
 
+export const WHATSAPP_NUMBER = "919582874719";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+
 export const WHY_CHOOSE_US = [
   {
     icon: "VerifiedIcon",

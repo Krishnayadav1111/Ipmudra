@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Box } from '@mui/material';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -8,6 +8,8 @@ import useScrollTop from '../../hooks/useScrollTop';
 
 const Layout = () => {
   useScrollTop();
+  const location = useLocation();
+  const isTrademarkLanding = location.pathname === '/trademark-registration-india';
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -16,7 +18,7 @@ const Layout = () => {
         <Outlet />
       </Box>
       <Footer />
-      <FloatingEnquireButton />
+      {!isTrademarkLanding && <FloatingEnquireButton />}
     </Box>
   );
 };

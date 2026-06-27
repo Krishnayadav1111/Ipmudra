@@ -18,9 +18,9 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import useNavbarScroll from "../../hooks/useNavbarScroll";
-import { NAV_LINKS } from "../../utils/constants";
+import { NAV_LINKS, WHATSAPP_URL } from "../../utils/constants";
 
 const Navbar = () => {
   const scrolled = useNavbarScroll(80);
@@ -28,6 +28,12 @@ const Navbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isTrademarkLanding = location.pathname === "/trademark-registration-india";
+
+  const openWhatsApp = () => {
+    window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
+  };
 
   const handleDrawerToggle = () => setDrawerOpen((prev) => !prev);
 
@@ -137,12 +143,16 @@ const Navbar = () => {
           color="secondary"
           fullWidth
           onClick={() => {
-            navigate("/trademark-registration-india");
+            if (isTrademarkLanding) {
+              openWhatsApp();
+            } else {
+              navigate("/trademark-registration-india");
+            }
             handleDrawerToggle();
           }}
           sx={{ py: 1.5, fontWeight: 700 }}
         >
-          Get Consultation
+          {isTrademarkLanding ? "Chat Now" : "Get Consultation"}
         </Button>
       </Box>
     </Box>
@@ -253,22 +263,40 @@ const Navbar = () => {
                   {link.label}
                 </Button>
               ))}
-              <Button
-                variant="contained"
-                color="secondary"
-                component={Link}
-                to="/trademark-registration-india"
-                sx={{
-                  ml: 1.5,
-                  fontSize: "0.78rem",
-                  fontWeight: 700,
-                  px: 2.5,
-                  py: 1,
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Get Consultation
-              </Button>
+              {isTrademarkLanding ? (
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={openWhatsApp}
+                  sx={{
+                    ml: 1.5,
+                    fontSize: "0.78rem",
+                    fontWeight: 700,
+                    px: 2.5,
+                    py: 1,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Chat Now
+                </Button>
+              ) : (
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  component={Link}
+                  to="/trademark-registration-india"
+                  sx={{
+                    ml: 1.5,
+                    fontSize: "0.78rem",
+                    fontWeight: 700,
+                    px: 2.5,
+                    py: 1,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Get Consultation
+                </Button>
+              )}
             </Stack>
           )}
 
