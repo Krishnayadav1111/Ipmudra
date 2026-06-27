@@ -154,8 +154,8 @@ const ContactContainer = () => {
                 gap: 1,
               }}>
                 <LocationOnIcon sx={{ color: '#C9A84C', fontSize: 30 }} />
-                <Typography sx={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', textAlign: 'center', px: 2 }}>
-                  Connaught Place, New Delhi – 110001
+                <Typography sx={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', textAlign: 'center', px: 2, whiteSpace: 'pre-line' }}>
+                  {CONTACT_INFO.address}
                 </Typography>
               </Box>
             </Box>
