@@ -97,7 +97,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: '/contact',
+        path: '/trademark-registration-india',
         element: (
           <Suspense fallback={<PageLoader />}>
             <ContactPage />

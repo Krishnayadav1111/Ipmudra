@@ -51,7 +51,7 @@ const TMTPage = () => {
               <Typography variant="body1" sx={{ color: '#4a4a6a', lineHeight: 1.85, mb: 4 }}>
                 IP Mudra's TMT practice provides cutting-edge legal services. From structuring software licensing agreements to advising on cybersecurity and data privacy frameworks, our experts ensure that tech startups, media conglomerates, and telecom operators remain compliant while driving innovation.
               </Typography>
-              <Button component={Link} to="/contact" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
+              <Button component={Link} to="/trademark-registration-india" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
                 Consult Our TMT Experts
               </Button>
             </motion.div>

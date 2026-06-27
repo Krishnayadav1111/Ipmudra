@@ -51,7 +51,7 @@ const DesignPage = () => {
               <Typography variant="body1" sx={{ color: '#4a4a6a', lineHeight: 1.85, mb: 4 }}>
                 IP Mudra helps designers, manufacturers, and innovators protect the visual identity of their products through strategic design registrations in India and internationally under the Hague System. Our team handles the complete process from search through registration and enforcement.
               </Typography>
-              <Button component={Link} to="/contact" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
+              <Button component={Link} to="/trademark-registration-india" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
                 Protect Your Design
               </Button>
             </motion.div>

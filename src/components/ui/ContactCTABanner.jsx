@@ -84,7 +84,7 @@ const ContactCTABanner = () => {
           </Typography>
           <Button
             component={Link}
-            to="/contact"
+            to="/trademark-registration-india"
             variant="contained"
             color="secondary"
             size="large"

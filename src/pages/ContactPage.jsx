@@ -9,7 +9,7 @@ const ContactPage = () => {
       <PageBanner
         title="Contact Us"
         subtitle="Get in touch with our team of IP experts. We respond to all inquiries within 24 business hours."
-        breadcrumbs={[{ label: 'Contact Us', path: '/contact' }]}
+        breadcrumbs={[{ label: 'Contact Us', path: '/trademark-registration-india' }]}
       />
       <ContactContainer />
     </>

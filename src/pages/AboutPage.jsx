@@ -54,7 +54,7 @@ const AboutPage = () => {
               <Typography variant="body1" sx={{ color: '#4a4a6a', lineHeight: 1.85, mb: 4 }}>
                 We combine our collective experience to give robust legal protection to your creativity — advising individuals and corporate bodies in all matters of intellectual property. The world is building in many sociological and infrastructural ways; we are here to push its legal growth.
               </Typography>
-              <Button component={Link} to="/contact" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.7, fontWeight: 700 }}>
+              <Button component={Link} to="/trademark-registration-india" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.7, fontWeight: 700 }}>
                 Get a Free Consultation
               </Button>
             </motion.div>

@@ -165,7 +165,7 @@ const HeroSection = () => {
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               <Button
                 component={Link}
-                to="/contact"
+                to="/trademark-registration-india"
                 variant="contained"
                 color="secondary"
                 size="large"

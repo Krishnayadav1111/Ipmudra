@@ -51,7 +51,7 @@ const CopyrightPage = () => {
               <Typography variant="body1" sx={{ color: '#4a4a6a', lineHeight: 1.85, mb: 4 }}>
                 IP Mudra provides comprehensive copyright solutions for authors, artists, software developers, and businesses. Our team handles copyright registration, drafts licensing agreements, and aggressively enforces copyright rights through litigation and ADR.
               </Typography>
-              <Button component={Link} to="/contact" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
+              <Button component={Link} to="/trademark-registration-india" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
                 Protect Your Work
               </Button>
             </motion.div>

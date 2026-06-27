@@ -51,7 +51,7 @@ const IPLitigationPage = () => {
               <Typography variant="body1" sx={{ color: '#4a4a6a', lineHeight: 1.85, mb: 4 }}>
                 IP Mudra stands at the forefront of IP litigation across India. Our team has successfully represented clients before High Courts, the Supreme Court of India, and specialized tribunals. We combine strategic thinking with rigorous enforcement to protect your valuable intangible assets.
               </Typography>
-              <Button component={Link} to="/contact" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
+              <Button component={Link} to="/trademark-registration-india" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
                 Consult Our Litigators
               </Button>
             </motion.div>

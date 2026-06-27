@@ -48,7 +48,7 @@ export const NAV_LINKS = [
   { label: "Copyright", path: "/copyright" },
   { label: "Design", path: "/design" },
   { label: "Patent", path: "/patent" },
-  { label: "Contact Us", path: "/contact" },
+  { label: "Contact Us", path: "/trademark-registration-india" },
 ];
 
 export const SERVICES = [

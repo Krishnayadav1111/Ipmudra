@@ -68,7 +68,7 @@ const TrademarkPage = () => {
                 At IP Mudra, our trademark team has handled thousands of trademark matters — from simple registrations to complex multi-jurisdictional disputes. We ensure your brand receives the robust legal shield it deserves.
               </Typography>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                <Button component={Link} to="/contact" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
+                <Button component={Link} to="/trademark-registration-india" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
                   Get Trademark Advice
                 </Button>
                 <Button component={Link} to="/services" variant="outlined" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 600 }}>

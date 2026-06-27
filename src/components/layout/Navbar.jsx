@@ -137,7 +137,7 @@ const Navbar = () => {
           color="secondary"
           fullWidth
           onClick={() => {
-            navigate("/contact");
+            navigate("/trademark-registration-india");
             handleDrawerToggle();
           }}
           sx={{ py: 1.5, fontWeight: 700 }}
@@ -257,7 +257,7 @@ const Navbar = () => {
                 variant="contained"
                 color="secondary"
                 component={Link}
-                to="/contact"
+                to="/trademark-registration-india"
                 sx={{
                   ml: 1.5,
                   fontSize: "0.78rem",

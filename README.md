@@ -69,7 +69,7 @@ src/
 | `/copyright` | Copyright services detail |
 | `/patent` | Patent services detail |
 | `/design` | Design IP services detail |
-| `/contact` | Contact form + office info |
+| `/trademark-registration-india` | Contact form + office info |
 | `*` | 404 Not Found |
 
 ---

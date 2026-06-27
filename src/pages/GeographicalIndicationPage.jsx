@@ -51,7 +51,7 @@ const GeographicalIndicationPage = () => {
               <Typography variant="body1" sx={{ color: '#4a4a6a', lineHeight: 1.85, mb: 4 }}>
                 IP Mudra has extensive experience in advising, filing, and prosecuting GI applications across various product categories in India. We work closely with associations, producer groups, and state boards to secure GI tags for agricultural, natural, and manufactured goods.
               </Typography>
-              <Button component={Link} to="/contact" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
+              <Button component={Link} to="/trademark-registration-india" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1.6, fontWeight: 700 }}>
                 Protect Your Heritage
               </Button>
             </motion.div>
