@@ -12,11 +12,11 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import heroBg from '../../../assets/hero_bg.png';
-import { WHATSAPP_URL } from '../../../utils/constants';
+import { WHATSAPP_URL, WHATSAPP_BASE_URL } from '../../../utils/constants';
 
 const openWhatsApp = (message) => {
   const url = message
-    ? `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`
+    ? `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(message)}`
     : WHATSAPP_URL;
   window.open(url, '_blank', 'noopener,noreferrer');
 };
