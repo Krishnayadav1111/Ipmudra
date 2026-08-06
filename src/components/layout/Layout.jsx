@@ -5,9 +5,11 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import FloatingEnquireButton from '../common/FloatingEnquireButton';
 import useScrollTop from '../../hooks/useScrollTop';
+import usePageSEO from '../../hooks/usePageSEO';
 
 const Layout = () => {
   useScrollTop();
+  usePageSEO();
   const location = useLocation();
   const isTrademarkLanding = location.pathname === '/trademark-registration-india';
 
