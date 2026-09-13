@@ -16,7 +16,8 @@ const TeamSection = ({ members }) => {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 12 },
+        pt: { xs: 3, md: 4 },
+        pb: { xs: 8, md: 12 },
         background: "linear-gradient(180deg, #ffffff 0%, #F8F6F1 100%)",
       }}
     >

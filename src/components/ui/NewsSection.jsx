@@ -33,7 +33,7 @@ const NewsSection = ({ items }) => {
   };
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, background: '#F8F6F1' }}>
+    <Box sx={{ py: { xs: 2, md: 2 }, background: '#F8F6F1' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 6 } }}>
         <SectionTitle
           title="Legal Insights & News"

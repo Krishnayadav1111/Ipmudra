@@ -33,7 +33,7 @@ const GoogleReviewsSection = () => {
   const displayReviews = reviews.slice(0, 3);
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, background: 'white' }}>
+    <Box sx={{ pt: { xs: 8, md: 12 }, pb: { xs: 3, md: 4 }, background: 'white' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 6 } }}>
         <Stack direction="row" spacing={1} alignItems="center" justifyContent="center" sx={{ mb: 1 }}>
           <GoogleIcon size={28} />
