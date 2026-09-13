@@ -6,7 +6,9 @@ import {
   Card,
   CardContent,
   Chip,
+  Button,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -120,28 +122,44 @@ const NewsSection = ({ items }) => {
                   >
                     {item.excerpt}
                   </Typography>
-                  <Box
+                  <Button
+                    component={Link}
+                    to={`/insights/${item.slug}`}
+                    endIcon={<ArrowForwardIcon sx={{ fontSize: 14 }} />}
                     sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 0.5,
+                      alignSelf: 'flex-start',
                       color: '#C9A84C',
-                      fontFamily: '"Inter", sans-serif',
                       fontWeight: 700,
                       fontSize: '0.78rem',
                       letterSpacing: '0.05em',
-                      textTransform: 'uppercase',
-                      cursor: 'pointer',
-                      transition: 'gap 0.2s',
-                      '&:hover': { gap: 1 },
+                      px: 0,
+                      '&:hover': { background: 'transparent', color: '#a07830' },
                     }}
                   >
-                    Read More <ArrowForwardIcon sx={{ fontSize: 14 }} />
-                  </Box>
+                    Read More
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
+        </Box>
+
+        <Box sx={{ textAlign: 'center', mt: 5 }}>
+          <Button
+            component={Link}
+            to="/insights"
+            variant="outlined"
+            sx={{
+              borderColor: '#C9A84C',
+              color: '#0B1F4B',
+              fontWeight: 700,
+              px: 4,
+              py: 1.2,
+              '&:hover': { borderColor: '#a07830', background: 'rgba(201,168,76,0.08)' },
+            }}
+          >
+            View All Insights
+          </Button>
         </Box>
       </Container>
     </Box>

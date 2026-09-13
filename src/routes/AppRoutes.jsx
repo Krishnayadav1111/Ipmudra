@@ -19,6 +19,10 @@ const CorporateLawPage = lazy(() => import('../pages/CorporateLawPage'));
 const GeographicalIndicationPage = lazy(() => import('../pages/GeographicalIndicationPage'));
 const TMTPage = lazy(() => import('../pages/TMTPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
+const TermsPage = lazy(() => import('../pages/TermsPage'));
+const PrivacyPage = lazy(() => import('../pages/PrivacyPage'));
+const InsightsPage = lazy(() => import('../pages/InsightsPage'));
+const InsightArticlePage = lazy(() => import('../pages/InsightArticlePage'));
 
 const PageLoader = () => (
   <Box
@@ -141,6 +145,38 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageLoader />}>
             <TMTPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/insights',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <InsightsPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/insights/:slug',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <InsightArticlePage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/terms',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <TermsPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/privacy',
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <PrivacyPage />
           </Suspense>
         ),
       },

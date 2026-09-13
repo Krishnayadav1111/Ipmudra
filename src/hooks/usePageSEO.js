@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { SITE_URL, INSIGHTS_ARTICLES } from '../utils/constants';
 
 const SEO_CONFIG = {
   '/': {
@@ -67,7 +68,24 @@ const SEO_CONFIG = {
     description: 'Navigate TMT legal complexities, Digital Personal Data Protection (DPDP) compliance, media contract drafting, and software deal structuring with expert legal counsel.',
     keywords: 'TMT legal advisors India, DPDP Act compliance, data privacy lawyers Delhi, technology licensing contracts, telecom regulatory advisory',
   },
+  '/insights': {
+    title: 'Legal Insights & IP News | IP Mudra',
+    description: 'Expert articles on trademark, patent, copyright, and regulatory developments in India from IP Mudra attorneys.',
+    keywords: 'IP law blog India, trademark news, patent updates India, copyright law insights, DPDP Act guide',
+  },
+  '/terms': {
+    title: 'Terms & Conditions | IP Mudra',
+    description: 'Terms and conditions for using the IP Mudra website. Informational content only — not legal advice or solicitation.',
+    keywords: 'IP Mudra terms, website terms conditions, law firm website disclaimer India',
+  },
+  '/privacy': {
+    title: 'Privacy Policy | IP Mudra',
+    description: 'How IP Mudra collects, uses, and protects your personal information when you use our website or submit enquiries.',
+    keywords: 'IP Mudra privacy policy, data protection India, DPDP compliance',
+  },
 };
+
+const getPageUrl = (pathname) => `${SITE_URL}${pathname === '/' ? '' : pathname}`;
 
 const updateMetaTag = (selector, content, attribute = 'name', attributeValue = null) => {
   let element = document.querySelector(selector);
@@ -85,11 +103,27 @@ const usePageSEO = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const seo = SEO_CONFIG[pathname] || {
-      title: 'IP Mudra | Intellectual Property Law Firm India',
-      description: 'Premier IP law firm in India. Expert legal services for Trademark, Copyright, Patent, Design, IP Litigation, and Corporate Law.',
-      keywords: 'IP Mudra, intellectual property, trademark registration, patent filing, copyright protection, design IP, IP litigation, corporate law',
-    };
+    let seo = SEO_CONFIG[pathname];
+
+    if (!seo && pathname.startsWith('/insights/')) {
+      const slug = pathname.replace('/insights/', '');
+      const article = INSIGHTS_ARTICLES.find((item) => item.slug === slug);
+      if (article) {
+        seo = {
+          title: `${article.title} | IP Mudra`,
+          description: article.excerpt,
+          keywords: `${article.category}, IP law India, ${article.title}`,
+        };
+      }
+    }
+
+    if (!seo) {
+      seo = {
+        title: 'IP Mudra | Intellectual Property Law Firm India',
+        description: 'Premier IP law firm in India. Expert legal services for Trademark, Copyright, Patent, Design, IP Litigation, and Corporate Law.',
+        keywords: 'IP Mudra, intellectual property, trademark registration, patent filing, copyright protection, design IP, IP litigation, corporate law',
+      };
+    }
 
     // 1. Document Title
     document.title = seo.title;
@@ -101,7 +135,7 @@ const usePageSEO = () => {
     // 3. Open Graph Tags
     updateMetaTag('meta[property="og:title"]', seo.title, 'property', 'og:title');
     updateMetaTag('meta[property="og:description"]', seo.description, 'property', 'og:description');
-    updateMetaTag('meta[property="og:url"]', `https://ipmudra.in${pathname === '/' ? '' : pathname}`, 'property', 'og:url');
+    updateMetaTag('meta[property="og:url"]', getPageUrl(pathname), 'property', 'og:url');
 
     // 4. Twitter Card Tags
     updateMetaTag('meta[name="twitter:title"]', seo.title, 'name', 'twitter:title');
@@ -115,7 +149,7 @@ const usePageSEO = () => {
       canonicalLink.setAttribute('id', 'canonical-link');
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute('href', `https://ipmudra.in${pathname === '/' ? '' : pathname}`);
+    canonicalLink.setAttribute('href', getPageUrl(pathname));
   }, [pathname]);
 };
 

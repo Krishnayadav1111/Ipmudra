@@ -15,9 +15,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { NAV_LINKS, CONTACT_INFO } from '../../utils/constants';
+import { NAV_LINKS, CONTACT_INFO, PRACTICE_AREA_LINKS, SOCIAL_LINKS } from '../../utils/constants';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -94,16 +93,15 @@ const Footer = () => {
             </Typography>
             <Stack direction="row" spacing={1}>
               {[
-                { Icon: LinkedInIcon, url: '#' },
-                { Icon: XIcon, url: '#' },
-                { Icon: InstagramIcon, url: 'https://www.instagram.com/ipmudra/' }
+                { Icon: LinkedInIcon, url: SOCIAL_LINKS.linkedin },
+                { Icon: InstagramIcon, url: SOCIAL_LINKS.instagram },
               ].map(({ Icon, url }, i) => (
                 <IconButton
                   key={i}
                   component="a"
                   href={url}
-                  target={url !== '#' ? "_blank" : undefined}
-                  rel={url !== '#' ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   size="small"
                   sx={{
                     color: 'rgba(255,255,255,0.6)',
@@ -162,20 +160,22 @@ const Footer = () => {
               Practice Areas
             </Typography>
             <Stack spacing={1}>
-              {['Trademark', 'Copyright', 'Patent', 'Design IP', 'IP Litigation', 'Corporate Law'].map((area) => (
-                <Typography
-                  key={area}
+              {PRACTICE_AREA_LINKS.map((area) => (
+                <MuiLink
+                  key={area.path}
+                  component={Link}
+                  to={area.path}
                   sx={{
                     color: 'rgba(255,255,255,0.65)',
                     fontSize: '0.85rem',
                     fontFamily: '"Inter", sans-serif',
-                    cursor: 'default',
+                    textDecoration: 'none',
                     transition: 'color 0.2s',
                     '&:hover': { color: '#C9A84C' },
                   }}
                 >
-                  {area}
-                </Typography>
+                  {area.label}
+                </MuiLink>
               ))}
             </Stack>
           </Grid>
@@ -264,19 +264,25 @@ const Footer = () => {
             © {currentYear} IP Mudra. All Rights Reserved.
           </Typography>
           <Stack direction="row" spacing={2}>
-            {['Terms & Conditions', 'Privacy Policy'].map((item) => (
-              <Typography
-                key={item}
+            {[
+              { label: 'Terms & Conditions', path: '/terms' },
+              { label: 'Privacy Policy', path: '/privacy' },
+              { label: 'Insights', path: '/insights' },
+            ].map((item) => (
+              <MuiLink
+                key={item.path}
+                component={Link}
+                to={item.path}
                 variant="caption"
                 sx={{
                   color: 'rgba(255,255,255,0.4)',
                   fontSize: '0.8rem',
-                  cursor: 'pointer',
+                  textDecoration: 'none',
                   '&:hover': { color: '#C9A84C' },
                 }}
               >
-                {item}
-              </Typography>
+                {item.label}
+              </MuiLink>
             ))}
           </Stack>
         </Box>

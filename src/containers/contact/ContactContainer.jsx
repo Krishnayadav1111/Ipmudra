@@ -18,7 +18,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { submitContact, resetContact } from '../../store/slices/contactSlice';
-import { CONTACT_INFO } from '../../utils/constants';
+import { CONTACT_INFO, MAP_EMBED_URL, GOOGLE_MAPS_PLACE_URL } from '../../utils/constants';
 
 const ContactContainer = () => {
   const dispatch = useDispatch();
@@ -139,24 +139,42 @@ const ContactContainer = () => {
                 })}
               </Stack>
 
-              {/* Map placeholder */}
-              <Box sx={{
-                mt: 4,
-                borderRadius: 2,
-                overflow: 'hidden',
-                border: '1px solid rgba(201,168,76,0.2)',
-                height: 150,
-                background: 'rgba(255,255,255,0.04)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                gap: 1,
-              }}>
-                <LocationOnIcon sx={{ color: '#C9A84C', fontSize: 30 }} />
-                <Typography sx={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', textAlign: 'center', px: 2, whiteSpace: 'pre-line' }}>
-                  {CONTACT_INFO.address}
-                </Typography>
+              {/* Google Maps */}
+              <Box sx={{ mt: 4 }}>
+                <Box
+                  sx={{
+                    borderRadius: 2,
+                    overflow: 'hidden',
+                    border: '1px solid rgba(201,168,76,0.2)',
+                    height: 200,
+                  }}
+                >
+                  <Box
+                    component="iframe"
+                    title="IP Mudra Office Location — IP MUDRA ASSOCIATES, New Delhi"
+                    src={MAP_EMBED_URL}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    sx={{ width: '100%', height: '100%', border: 0, display: 'block' }}
+                  />
+                </Box>
+                <Button
+                  component="a"
+                  href={GOOGLE_MAPS_PLACE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  size="small"
+                  sx={{
+                    mt: 1.5,
+                    color: '#C9A84C',
+                    fontWeight: 600,
+                    fontSize: '0.8rem',
+                    px: 0,
+                    '&:hover': { background: 'transparent', color: '#e0c070' },
+                  }}
+                >
+                  Open in Google Maps →
+                </Button>
               </Box>
             </Box>
           </motion.div>

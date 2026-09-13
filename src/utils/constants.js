@@ -44,6 +44,7 @@ export const NAV_LINKS = [
   { label: "About Us", path: "/about" },
   { label: "Our Services", path: "/services" },
   { label: "Our Team", path: "/team" },
+  { label: "Insights", path: "/insights" },
   { label: "Trademark", path: "/trademark" },
   { label: "Copyright", path: "/copyright" },
   { label: "Design", path: "/design" },
@@ -494,9 +495,122 @@ export const CONTACT_INFO = {
   hours: "Mon – Sat: 9:00 AM – 6:30 PM",
 };
 
+export const SITE_URL = "https://www.ipmudra.com";
+
 export const WHATSAPP_NUMBER = "919582874719";
 export const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const WHATSAPP_URL = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent("Hi, I would like to request assistance regarding your IP and legal services.")}`;
+
+export const OFFICE_LOCATION = {
+  name: "IP MUDRA ASSOCIATES",
+  lat: 28.6326892,
+  lng: 77.2336766,
+  zoom: 17,
+};
+
+export const GOOGLE_MAPS_PLACE_URL =
+  "https://www.google.com/maps/place/IP+MUDRA+ASSOCIATES/@28.6326892,77.2336766,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfde15db7442d:0x6d647f2d18bd8fa0!8m2!3d28.6326892!4d77.2336766!16s%2Fg%2F11z7lwy4k7?hl=en&entry=ttu";
+
+export const MAP_EMBED_URL = `https://maps.google.com/maps?q=${OFFICE_LOCATION.lat},${OFFICE_LOCATION.lng}&hl=en&z=${OFFICE_LOCATION.zoom}&output=embed`;
+
+export const SOCIAL_LINKS = {
+  instagram: "https://www.instagram.com/ipmudra/",
+  linkedin: "https://www.linkedin.com/company/ipmudra",
+  whatsapp: WHATSAPP_BASE_URL,
+};
+
+/** Fallback stats — overridden by /api/google-reviews or VITE_GOOGLE_RATING / VITE_GOOGLE_TOTAL_REVIEWS */
+export const GOOGLE_REVIEWS_DEFAULTS = {
+  rating: 5.0,
+  totalReviews: 232,
+};
+
+export const GOOGLE_REVIEWS_FALLBACK_ITEMS = [
+  {
+    name: "Anuj Singh",
+    date: "2025-06-19",
+    text: "Very good, polite and professional. Affordable pricing and my trademark was registered within 3 hours.",
+    rating: 5,
+    photoUri: null,
+  },
+  {
+    name: "Sathish Adithya",
+    date: "2025-06-17",
+    text: "Trademark registration completed in just two days. Outstanding service, transparent process, and genuinely client-focused.",
+    rating: 5,
+    photoUri: null,
+  },
+  {
+    name: "Aman Khanna",
+    date: "2025-06-07",
+    text: "Good service, good behaviour, no hidden charges. If you want trademark registration, always choose IP Mudra.",
+    rating: 5,
+    photoUri: null,
+  },
+];
+
+export const GOOGLE_REVIEWS = {
+  ...GOOGLE_REVIEWS_DEFAULTS,
+  reviewsUrl: import.meta.env.VITE_GOOGLE_REVIEWS_URL || GOOGLE_MAPS_PLACE_URL,
+  items: GOOGLE_REVIEWS_FALLBACK_ITEMS,
+};
+
+export const PRACTICE_AREA_LINKS = [
+  { label: "Trademark", path: "/trademark" },
+  { label: "Copyright", path: "/copyright" },
+  { label: "Patent", path: "/patent" },
+  { label: "Design IP", path: "/design" },
+  { label: "IP Litigation", path: "/ip-litigation" },
+  { label: "Corporate Law", path: "/corporate-law" },
+];
+
+export const INSIGHTS_ARTICLES = [
+  {
+    id: 1,
+    slug: "supreme-court-trademark-dilution-india",
+    title: "Supreme Court Landmark Ruling on Trademark Dilution in India",
+    date: "2026-03-15",
+    excerpt:
+      "The Supreme Court of India has issued a significant ruling clarifying the standards for trademark dilution, impacting brand owners across all industries.",
+    category: "Trademark",
+    content: [
+      "Trademark dilution occurs when a well-known mark is used in a way that weakens its distinctiveness or reputation — even without direct competition or consumer confusion. Recent Supreme Court guidance has sharpened how Indian courts evaluate such claims.",
+      "For brand owners, the key takeaway is that fame alone is not enough. Rights holders must demonstrate that the offending use blurs, tarnishes, or free-rides on the reputation of a mark that enjoys substantial recognition among the relevant public in India.",
+      "Businesses should conduct periodic brand audits, monitor marketplace use of similar names and logos, and maintain evidence of advertising spend, market share, and consumer recognition. Early action — through opposition, cease-and-desist, or injunction — remains the most cost-effective strategy.",
+      "If your brand operates in FMCG, technology, fashion, or franchising, dilution risks are especially high. IP Mudra assists clients with watch services, enforcement strategy, and litigation before the Trade Marks Registry and High Courts.",
+    ],
+  },
+  {
+    id: 2,
+    slug: "patent-amendment-rules-2024-india",
+    title: "New Patent (Amendment) Rules 2024: What You Need to Know",
+    date: "2026-02-28",
+    excerpt:
+      "The Indian Patent Office has notified significant amendments to the Patent Rules, streamlining the examination process and introducing new fee structures.",
+    category: "Patent",
+    content: [
+      "The 2024 amendments to India's Patent Rules aim to accelerate prosecution timelines, clarify procedural requirements, and align filing practices with international expectations for startups and MSMEs.",
+      "Applicants should review revised fee categories, updated timelines for requesting examination, and documentation standards for working statements and form filings. Missing a revised deadline can delay grant by months.",
+      "For technology companies, the changes reinforce the value of early prior-art search, well-drafted specifications, and proactive responses to examination reports. A poorly drafted claim set remains the most common cause of rejection or narrow protection.",
+      "IP Mudra supports inventors and enterprises with patentability assessment, provisional and complete specification drafting, and end-to-end prosecution before the Indian Patent Office.",
+    ],
+  },
+  {
+    id: 3,
+    slug: "dpdp-act-implications-for-businesses",
+    title: "Digital Personal Data Protection Act: Implications for Businesses",
+    date: "2026-02-10",
+    excerpt:
+      "With the DPDP Act coming into force, Indian businesses must revisit their data handling practices. IP Mudra guides you through compliance.",
+    category: "TMT",
+    content: [
+      "India's Digital Personal Data Protection Act introduces consent-based processing, purpose limitation, data minimisation, and accountability obligations for organisations handling personal data.",
+      "Businesses collecting customer, employee, or vendor data must map data flows, update privacy notices, appoint responsible personnel where required, and implement breach response protocols. Contracts with vendors and SaaS providers need DPDP-aligned clauses.",
+      "For IP-rich companies, data compliance intersects with brand trust. Mishandling user data can trigger regulatory scrutiny and reputational harm alongside traditional IP risks.",
+      "IP Mudra's TMT practice advises on privacy policy drafting, vendor agreements, consent frameworks, and practical compliance roadmaps tailored to Indian enterprises and startups.",
+    ],
+  },
+];
 
 export const WHY_CHOOSE_US = [
   {

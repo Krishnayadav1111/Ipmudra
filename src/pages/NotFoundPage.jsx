@@ -1,8 +1,14 @@
 import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+const helpfulLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'Trademark Registration', path: '/trademark-registration-india' },
+  { label: 'Our Services', path: '/services' },
+  { label: 'Contact Us', path: '/trademark-registration-india' },
+];
 
 const NotFoundPage = () => {
   return (
@@ -41,12 +47,30 @@ const NotFoundPage = () => {
         >
           Page Not Found
         </Typography>
-        <Typography sx={{ color: 'rgba(255,255,255,0.6)', mb: 5, maxWidth: 400, mx: 'auto' }}>
+        <Typography sx={{ color: 'rgba(255,255,255,0.6)', mb: 4, maxWidth: 400, mx: 'auto' }}>
           The page you are looking for does not exist or has been moved.
         </Typography>
-        <Button component={Link} to="/" variant="contained" color="secondary" size="large" sx={{ px: 5, py: 1.8, fontWeight: 700 }}>
-          Back to Home
-        </Button>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" sx={{ mb: 3 }}>
+          {helpfulLinks.map((link) => (
+            <Button
+              key={link.path + link.label}
+              component={Link}
+              to={link.path}
+              variant={link.label === 'Home' ? 'contained' : 'outlined'}
+              color="secondary"
+              sx={{
+                fontWeight: 700,
+                ...(link.label !== 'Home' && {
+                  borderColor: 'rgba(201,168,76,0.5)',
+                  color: '#C9A84C',
+                  '&:hover': { borderColor: '#C9A84C', background: 'rgba(201,168,76,0.08)' },
+                }),
+              }}
+            >
+              {link.label}
+            </Button>
+          ))}
+        </Stack>
       </motion.div>
     </Box>
   );
