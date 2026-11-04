@@ -94,27 +94,15 @@ const TeamSection = ({ members }) => {
                       >
                         {member.name}
                       </Typography>
-                      {member.subtitle && (
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: "#C9A84C",
-                            fontWeight: 700,
-                            fontSize: "0.72rem",
-                            letterSpacing: "0.04em",
-                            mb: 0.4,
-                          }}
-                        >
-                          {member.subtitle}
-                        </Typography>
-                      )}
                       <Typography
                         variant="body2"
                         sx={{
-                          color: member.subtitle ? "#6a6a8a" : "#C9A84C",
+                          color: "#C9A84C",
                           fontWeight: 600,
-                          fontSize: "0.75rem",
+                          fontSize: member.role?.length > 40 ? "0.62rem" : "0.75rem",
+                          lineHeight: 1.45,
                           mb: 0.8,
+                          px: member.role?.length > 40 ? 0.5 : 0,
                         }}
                       >
                         {member.role}
@@ -131,17 +119,19 @@ const TeamSection = ({ members }) => {
                       >
                         {member.specialization}
                       </Typography> */}
-                      <Chip
-                        label={member.experience}
-                        size="small"
-                        sx={{
-                          background: "rgba(11,31,75,0.06)",
-                          color: "#0B1F4B",
-                          fontSize: "0.68rem",
-                          fontWeight: 700,
-                          height: 20,
-                        }}
-                      />
+                      {member.experience && (
+                        <Chip
+                          label={member.experience}
+                          size="small"
+                          sx={{
+                            background: "rgba(11,31,75,0.06)",
+                            color: "#0B1F4B",
+                            fontSize: "0.68rem",
+                            fontWeight: 700,
+                            height: 20,
+                          }}
+                        />
+                      )}
                     </CardContent>
                   </Card>
                 </motion.div>

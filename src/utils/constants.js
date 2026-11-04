@@ -19,6 +19,7 @@ import SachinImg from "../assets/Sachin.jpeg";
 import MokshaImg from "../assets/moksha.jpeg";
 import RaviImg from "../assets/Raviyadav.jpeg";
 import ManojImg from "../assets/manojsharma.jpeg";
+import KenaSavaniImg from "../assets/Advocate Kena Savani.jpeg";
 
 import TridentImg from "../assets/Trident-textile.jpeg";
 import BoldfitImg from "../assets/bold-health-and-wellness.jpeg";
@@ -199,6 +200,9 @@ export const SERVICES = [
   },
 ];
 
+const CO_FOUNDER_HEARING_OFFICER_ROLE =
+  "Co-Founder & Ex-Hearing Officer in Trade Mark Registry (Ministry of Commerce and Industry)";
+
 export const TEAM_MEMBERS = [
   {
     id: 1,
@@ -221,8 +225,7 @@ export const TEAM_MEMBERS = [
   {
     id: 3,
     name: "Anil Kumar Yadav",
-    subtitle: "Co-founder",
-    role: "Non Equity Partner",
+    role: CO_FOUNDER_HEARING_OFFICER_ROLE,
     specialization: "Patent & Trademark Prosecution",
     experience: "11 years",
     avatar: AnilImg,
@@ -231,12 +234,19 @@ export const TEAM_MEMBERS = [
   {
     id: 4,
     name: "Ashish Khanna",
-    subtitle: "Co-founder",
-    role: "Non Equity Partner",
+    role: CO_FOUNDER_HEARING_OFFICER_ROLE,
     specialization: "Corporate Law & TMT",
     experience: "11 years",
     avatar: AshishImg,
     initials: "AK",
+  },
+  {
+    id: 11,
+    name: "Kena Savani",
+    role: "Co-Founder",
+    specialization: "Intellectual Property",
+    avatar: KenaSavaniImg,
+    initials: "KS",
   },
   {
     id: 5,
