@@ -39,10 +39,7 @@ const TeamSection = ({ members }) => {
             gap: { xs: 2, md: 3 },
           }}
         >
-          {members.map(
-            (member, index) => (
-              console.log(member),
-              (
+          {members.map((member, index) => (
                 <motion.div
                   key={member.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -97,10 +94,24 @@ const TeamSection = ({ members }) => {
                       >
                         {member.name}
                       </Typography>
+                      {member.subtitle && (
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            color: "#C9A84C",
+                            fontWeight: 700,
+                            fontSize: "0.72rem",
+                            letterSpacing: "0.04em",
+                            mb: 0.4,
+                          }}
+                        >
+                          {member.subtitle}
+                        </Typography>
+                      )}
                       <Typography
                         variant="body2"
                         sx={{
-                          color: "#C9A84C",
+                          color: member.subtitle ? "#6a6a8a" : "#C9A84C",
                           fontWeight: 600,
                           fontSize: "0.75rem",
                           mb: 0.8,
@@ -134,9 +145,7 @@ const TeamSection = ({ members }) => {
                     </CardContent>
                   </Card>
                 </motion.div>
-              )
-            ),
-          )}
+          ))}
         </Box>
       </Container>
     </Box>

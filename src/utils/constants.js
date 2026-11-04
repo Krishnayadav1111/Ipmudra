@@ -221,6 +221,7 @@ export const TEAM_MEMBERS = [
   {
     id: 3,
     name: "Anil Kumar Yadav",
+    subtitle: "Co-founder",
     role: "Non Equity Partner",
     specialization: "Patent & Trademark Prosecution",
     experience: "11 years",
@@ -230,6 +231,7 @@ export const TEAM_MEMBERS = [
   {
     id: 4,
     name: "Ashish Khanna",
+    subtitle: "Co-founder",
     role: "Non Equity Partner",
     specialization: "Corporate Law & TMT",
     experience: "11 years",
