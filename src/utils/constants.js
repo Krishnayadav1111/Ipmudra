@@ -245,6 +245,7 @@ export const TEAM_MEMBERS = [
     name: "Kena Savani",
     role: "Co-Founder",
     specialization: "Intellectual Property",
+    experience: "6 years",
     avatar: KenaSavaniImg,
     initials: "KS",
   },
