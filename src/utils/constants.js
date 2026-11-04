@@ -19,6 +19,7 @@ import MokshaImg from "../assets/moksha.jpeg";
 import RaviImg from "../assets/Raviyadav.jpeg";
 import ManojImg from "../assets/manojsharma.jpeg";
 import KenaSavaniImg from "../assets/Advocate Kena Savani.jpeg";
+import KrishnaImg from "../assets/Krishna.jpeg";
 
 import TridentImg from "../assets/Trident-textile.jpeg";
 import BoldfitImg from "../assets/bold-health-and-wellness.jpeg";
@@ -292,6 +293,15 @@ export const TEAM_MEMBERS = [
     experience: "1 years",
     avatar: ManojImg,
     initials: "MS",
+  },
+  {
+    id: 12,
+    name: "Krishna Yadav",
+    role: "Patent Agent",
+    specialization: "Patent Prosecution",
+    experience: "6 years",
+    avatar: KrishnaImg,
+    initials: "KY",
   },
 ];
 
