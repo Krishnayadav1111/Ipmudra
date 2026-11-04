@@ -14,7 +14,6 @@ import AnilImg from "../assets/Anil.jpeg";
 import AshishImg from "../assets/Ashish.jpeg";
 import MayankImg from "../assets/Mayank.jpeg";
 import SandhayaImg from "../assets/Sandhaya.jpeg";
-import VarunImg from "../assets/varun.jpeg";
 import SachinImg from "../assets/Sachin.jpeg";
 import MokshaImg from "../assets/moksha.jpeg";
 import RaviImg from "../assets/Raviyadav.jpeg";
@@ -212,15 +211,6 @@ export const TEAM_MEMBERS = [
     experience: "36 years",
     avatar: ArvindImg,
     initials: "AV",
-  },
-  {
-    id: 2,
-    name: "Varun Seth",
-    role: "Equity Partner",
-    specialization: "IP Litigation & Enforcement",
-    experience: "27 years",
-    avatar: VarunImg,
-    initials: "VS",
   },
   {
     id: 3,

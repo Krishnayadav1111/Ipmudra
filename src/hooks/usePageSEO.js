@@ -46,7 +46,7 @@ const SEO_CONFIG = {
   '/team': {
     title: 'Our IP Lawyers & Legal Partners | Team IP Mudra',
     description: 'Meet our dedicated team of experienced intellectual property attorneys, managing directors, and technical specialists leading IP strategy across India.',
-    keywords: 'IP Mudra team, Arvind Venkataraman, Varun Seth, top IP lawyers India, intellectual property associates Delhi, patent prosecutors',
+    keywords: 'IP Mudra team, Arvind Venkataraman, top IP lawyers India, intellectual property associates Delhi, patent prosecutors',
   },
   '/ip-litigation': {
     title: 'IP Litigation & Dispute Resolution Advocates in India | IP Mudra',
