@@ -200,8 +200,13 @@ export const SERVICES = [
   },
 ];
 
-const CO_FOUNDER_HEARING_OFFICER_ROLE =
+export const CO_FOUNDER_HEARING_OFFICER_ROLE =
   "Co-Founder & Ex-Hearing Officer in Trade Mark Registry (Ministry of Commerce and Industry)";
+
+export const SEO_KEY_ATTORNEY = {
+  name: "Anil Kumar Yadav",
+  role: CO_FOUNDER_HEARING_OFFICER_ROLE,
+};
 
 export const TEAM_MEMBERS = [
   {

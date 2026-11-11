@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { SITE_URL, INSIGHTS_ARTICLES } from '../utils/constants';
+import { SITE_URL, INSIGHTS_ARTICLES, SEO_KEY_ATTORNEY } from '../utils/constants';
 
 const SEO_CONFIG = {
   '/': {
@@ -39,14 +39,14 @@ const SEO_CONFIG = {
     keywords: 'design registration India, product aesthetic protection, industrial design law, design infringement, design IP attorneys',
   },
   '/trademark-registration-india': {
-    title: 'Online Trademark Registration in India | Contact IP Mudra',
-    description: 'Get fast, hassle-free, 100% online trademark registration in India with zero hidden charges. Connect with dedicated legal experts at IP Mudra today.',
-    keywords: 'online trademark registration India, trademark fee India, trademark search online, register brand name India, cheap trademark filing Delhi',
+    title: `Trademark Registration India | ${SEO_KEY_ATTORNEY.name} | IP Mudra`,
+    description: `Online trademark registration in India with ${SEO_KEY_ATTORNEY.name}, ${SEO_KEY_ATTORNEY.role}. Fast filing, transparent pricing, and expert legal support from IP Mudra.`,
+    keywords: `online trademark registration India, ${SEO_KEY_ATTORNEY.name}, Ex-Hearing Officer Trademark Registry, trademark attorney Delhi, register brand name India, trademark filing New Delhi`,
   },
   '/team': {
-    title: 'Our IP Lawyers & Legal Partners | Team IP Mudra',
-    description: 'Meet our dedicated team of experienced intellectual property attorneys, managing directors, and technical specialists leading IP strategy across India.',
-    keywords: 'IP Mudra team, Arvind Venkataraman, top IP lawyers India, intellectual property associates Delhi, patent prosecutors',
+    title: `${SEO_KEY_ATTORNEY.name} | Co-Founder & Ex-Hearing Officer | IP Mudra Team`,
+    description: `Meet ${SEO_KEY_ATTORNEY.name}, ${SEO_KEY_ATTORNEY.role}, and IP Mudra's team of trademark, patent, and copyright attorneys serving clients across India from New Delhi.`,
+    keywords: `${SEO_KEY_ATTORNEY.name}, Co-Founder IP Mudra, Ex-Hearing Officer Trademark Registry, Ministry of Commerce and Industry, trademark attorney Delhi, IP lawyers India, patent agent India`,
   },
   '/ip-litigation': {
     title: 'IP Litigation & Dispute Resolution Advocates in India | IP Mudra',
