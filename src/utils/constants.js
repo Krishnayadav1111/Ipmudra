@@ -515,7 +515,7 @@ export const CONTACT_INFO = {
 
 export const SITE_URL = "https://www.ipmudra.com";
 
-export const WHATSAPP_NUMBER = "919582874719";
+export const WHATSAPP_NUMBER = "919971765671";
 export const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const WHATSAPP_URL = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent("Hi, I would like to request assistance regarding your IP and legal services.")}`;
 
