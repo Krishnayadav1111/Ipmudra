@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+const GTM_CONTAINER_ID = 'GTM-PXDTDBST';
 
-const loadGtag = () => {
+const loadLegacyGtag = () => {
   if (!GA_MEASUREMENT_ID || window.gtag) return;
 
   const script = document.createElement('script');
@@ -19,19 +20,34 @@ const loadGtag = () => {
   window.gtag('config', GA_MEASUREMENT_ID, { send_page_view: false });
 };
 
+const pushGtmPageView = (pathname, search) => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'page_view',
+    page_path: `${pathname}${search}`,
+    page_title: document.title,
+    gtmContainerId: GTM_CONTAINER_ID,
+  });
+};
+
 const useGoogleAnalytics = () => {
   const { pathname, search } = useLocation();
 
   useEffect(() => {
-    loadGtag();
+    if (GA_MEASUREMENT_ID) {
+      loadLegacyGtag();
+    }
   }, []);
 
   useEffect(() => {
-    if (!GA_MEASUREMENT_ID || !window.gtag) return;
-    window.gtag('event', 'page_view', {
-      page_path: `${pathname}${search}`,
-      page_title: document.title,
-    });
+    pushGtmPageView(pathname, search);
+
+    if (GA_MEASUREMENT_ID && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_path: `${pathname}${search}`,
+        page_title: document.title,
+      });
+    }
   }, [pathname, search]);
 };
 
