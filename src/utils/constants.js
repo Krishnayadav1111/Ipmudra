@@ -9,7 +9,6 @@ import DevicesIcon from "@mui/icons-material/Devices";
 import NatureIcon from "@mui/icons-material/Nature";
 import VerifiedIcon from "@mui/icons-material/Verified";
 
-import ArvindImg from "../assets/Arvind.jpeg";
 import AnilImg from "../assets/Anil.jpeg";
 import AshishImg from "../assets/Ashish.jpeg";
 import MayankImg from "../assets/Mayank.jpeg";
@@ -209,15 +208,6 @@ export const SEO_KEY_ATTORNEY = {
 };
 
 export const TEAM_MEMBERS = [
-  {
-    id: 1,
-    name: "Arvind Venkataraman",
-    role: "Founder & Managing Director",
-    specialization: "IP Strategy & Corporate Law",
-    experience: "36 years",
-    avatar: ArvindImg,
-    initials: "AV",
-  },
   {
     id: 3,
     name: "Anil Kumar Yadav",
@@ -509,7 +499,8 @@ export const CONTACT_INFO = {
   address:
     "IP Mudra associates\n G2 (Ground Floor) DELHI TAX BAR ASSOCIATION\n LAWYER CHAMBERS \n30,D.D.U.MARG OPPOSITE TO ROUSE AVENUE COURT,\nNEW DELHI 110002",
   email: "info@ipmudra.com",
-  phone: `+91-9582874719 \n +91-7827014432`,
+  phone: `+91 99717 65671`,
+  phoneTel: `+919971765671`,
   hours: "Mon – Sat: 9:00 AM – 6:30 PM",
 };
 

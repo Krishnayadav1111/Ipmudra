@@ -33,7 +33,7 @@ const sections = [
   },
   {
     title: '8. Contact',
-    body: 'For questions regarding these Terms, contact us at info@ipmudra.com or +91-9582874719.',
+    body: 'For questions regarding these Terms, contact us at info@ipmudra.com or +91 99717 65671.',
   },
 ];
 

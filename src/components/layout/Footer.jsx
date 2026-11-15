@@ -207,7 +207,7 @@ const Footer = () => {
               <Stack direction="row" spacing={1.5} alignItems="center">
                 <PhoneIcon sx={{ color: '#C9A84C', fontSize: 18, flexShrink: 0 }} />
                 <MuiLink
-                  href={`tel:${CONTACT_INFO.phone}`}
+                  href={`tel:${CONTACT_INFO.phoneTel || CONTACT_INFO.phone}`}
                   sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.875rem', textDecoration: 'none', whiteSpace: 'pre-line', '&:hover': { color: '#C9A84C' } }}
                 >
                   {CONTACT_INFO.phone}
